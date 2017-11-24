@@ -1,0 +1,128 @@
+<?php
+/*
+		NOTE:
+		$this->slick will be inserted automatically, so do not change that.
+
+		Remove all event blocks you do not need.
+
+ */
+?>
+<script type="text/javascript">
+(function($) {
+$(document).ready(function() {
+
+/*
+*		EVENT: afterChange
+*		After slide change callback
+*		@params: event, slick, currentSlide
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('afterChange', function(event, slick, currentSlide){
+	// your function
+});
+
+
+/*
+*		EVENT: beforeChange
+*		Before slide change callback
+*		@params: event, slick, currentSlide, nextSlide
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	// your function
+});
+
+
+/*
+*		EVENT: breakpoint
+*		Fires after a breakpoint is hit
+*		@params: event, slick, breakpoint
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('breakpoint', function(event, slick, breakpoint){
+	// your function
+});
+
+
+/*
+*		EVENT: destroy
+*		When slider is destroyed, or unslicked.
+*		@params: event, slick
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('destroy', function(event, slick){
+	// your function
+});
+
+
+/*
+*		EVENT: edge
+*		Fires when an edge is overscrolled in non-infinite mode.
+*		@params: event, slick, direction
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('edge', function(event, slick, direction){
+	// your function
+});
+
+
+/*
+*		EVENT: init
+*		When Slick initializes for the first time callback. Note that this event should be defined before initializing the slider.
+*		@params: event, slick
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('init', function(event, slick){
+	// your function
+});
+
+
+/*
+*		EVENT: reInit
+*		Every time Slick (re-)initializes callback
+*		@params: event, slick
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('reInit', function(event, slick){
+	// your function
+});
+
+
+/*
+*		EVENT: setPosition
+*		Every time Slick recalculates position
+*		@params: event, slick
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('setPosition', function(event, slick){
+	// your function
+});
+
+
+/*
+*		EVENT: swipe
+*		Fires after swipe/drag
+*		@params: event, slick, direction
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('swipe', function(event, slick, direction){
+	// your function
+});
+
+
+/*
+*		EVENT: lazyLoaded
+*		Fires after image loads lazily
+*		(works only with "Slick Image Gallery")
+*		@params: event, slick, image, imageSource
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('lazyLoaded', function(event, slick, image, imageSource){
+	// your function
+});
+
+
+/*
+*		EVENT: lazyLoadError
+*		Fires after image fails to load
+*		(works only with "Slick Image Gallery")
+*		@params: event, slick, image, imageSource
+*/
+$("#slickslides_<?php echo $this->slick; ?>").on('lazyLoadError', function(event, slick, image, imageSource){
+	// your function
+});
+
+
+});
+})(jQuery);
+</script>

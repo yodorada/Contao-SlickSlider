@@ -1,0 +1,15 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+	<?php if($this->be_thumb): ?>
+			<div class="tl_e23_slick_gallery_item"><?php echo $this->generateImage($this->getImage($this->singleSRC, 100, 100, 'proportional'), $this->alt); ?></div>
+  <?php else: ?>
+  <figure class="image_container">
+  	
+    <img <?php if($this->useLazyLoad): ?>data-lazy<?php else: ?>src<?php endif; ?>="<?= $this->singleSRC; ?>" alt="<?= $this->alt ?>"<?php if ($this->title) echo ' title="' . $this->title . '"'; ?><?php if ($this->class) echo ' class="' . $this->class . '"'; ?><?= $this->attributes ?>>
+    <?php if ($this->caption): ?>
+    <figcaption class="caption"><?= $this->caption ?></figcaption>
+    <?php endif; ?>
+  </figure>
+	<?php endif; ?>
+<?php $this->endblock(); ?>

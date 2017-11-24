@@ -1,0 +1,35 @@
+<section class="<?= $this->class ?> slick_gallery block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+	
+	<?php if ($this->headline): ?>
+	 <div class="headline">
+    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+   </div>
+  <?php endif; ?>
+
+<?php if($this->slickEvents):
+echo $this->slickEvents;
+endif; ?>
+<script type="text/javascript">
+var _sCnf<?php echo $this->slick; ?> = {};
+<?php
+if($this->slickSettings) {
+echo $this->slickSettings;
+}
+?>
+
+ (function($) {
+   $(document).ready(function() {
+		if($("#slickslides_<?= $this->slick ?>").children().length) {
+			$("#slickslides_<?= $this->slick ?>").slick(_sCnf<?php echo $this->slick; ?>);
+		}
+	});
+})(jQuery);
+</script>
+
+  <div class="slickslides<?= $this->slickConfig; ?>" id="slickslides_<?= $this->slick ?>">
+	<?php if($this->images): ?>
+		<?php echo $this->images; ?>
+	<?php endif; ?>
+  </div>
+
+</section>

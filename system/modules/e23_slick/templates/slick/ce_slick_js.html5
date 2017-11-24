@@ -1,0 +1,61 @@
+	<?php
+	foreach($this->mainSettings as $setting => $value)
+	{
+		$str = "_sCnf".$this->slick."['".$setting."'] = ";
+		if(empty($value))
+		{
+			$value = false;
+		}
+		if(is_numeric($value))
+		{
+			$str .= $value.";";
+		}
+		elseif(is_bool($value))
+		{
+			$str .= ($value?'true':'false').";";
+		}
+		else
+		{
+			$str .= "\"".addslashes($value)."\";";
+		}
+		echo $str;
+	}
+	if($this->subSettings)
+	{
+		$str = "_sCnf".$this->slick.".responsive = [";
+		$countSub = 0;
+		foreach($this->subSettings as $screen => $settings)
+		{
+			$str .= ($countSub>0?", ":"")."{";
+			$str .= "breakpoint: ".$screen.",";
+			$str .= "settings: {";
+			$countSub++;
+			$count = 0;
+			foreach($settings as $setting => $value)
+			{
+				if(empty($value))
+				{
+					continue;
+				}
+				$str .= ($count>0?", ":"").$setting.": ";
+				if(is_numeric($value))
+				{
+					$str .= $value;
+				}
+				elseif(is_bool($value))
+				{
+					$str .= ($value?'true':'false');
+				}
+				else
+				{
+					$str .= "\"".addslashes($value)."\"";
+				}
+				$count++;
+			}
+			$str .= "}";
+		$str .= "}";
+	}
+	$str .= "];";
+	echo $str;
+}
+?>

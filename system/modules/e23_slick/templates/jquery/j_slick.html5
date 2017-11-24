@@ -1,0 +1,6 @@
+<?php
+// Add the slick style sheet and a basic theme
+$GLOBALS['TL_CSS'][] = 'assets/slick/'. $GLOBALS['TL_ASSETS']['SLICK'] .'/css/slick.min.css|static';
+$GLOBALS['TL_CSS'][] = 'assets/slick/'. $GLOBALS['TL_ASSETS']['SLICK'] .'/css/slick-theme.min.css|static';
+?>
+<script src="<?= TL_ASSETS_URL ?>assets/slick/<?= $GLOBALS['TL_ASSETS']['SLICK'] ?>/js/slick.min.js"></script>
