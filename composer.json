@@ -5,7 +5,7 @@
     "keywords":["contao", "slick", "carousel"],
     "type":"contao-module",
     "homepage":"http://yodorada.de",
-    "license":"LGPL-3.0+",
+    "license":"LGPL-3.0-or-later",
     "authors":[
         {
             "name":"Maya K. Herrmann",
@@ -23,7 +23,7 @@
         "contao-community-alliance/composer-plugin": "^2.4 || ^3.0"
     },
     "replace": {
-        "contao-legacy/e23_slick": "self.version"
+        "contao-legacy/yodorada_slick": "self.version"
     },
     "extra":{
         "contao":{
